@@ -1,8 +1,11 @@
 // Yasin Abdulkariem 2023
+import java.util.ArrayList;
 public class Deck {
-    ArrayList<String> cards = new ArrayList<String>();
-    ArrayList<String> cardsLeft = new ArrayList<String>();
+    private ArrayList<Card> deck = new ArrayList<Card>();
+    private int cardsLeft;
 
+    public Deck(ArrayList<Card> deck, String rank, String suit, int point){
 
+    }
 
 }

@@ -1,16 +1,17 @@
 // Yasin Abdulkariem 2023
 public class Card {
-    private int rank;
+    private String rank;
     private String suit;
-    private String point;
+    private int point;
 
-    public Card(int theRank, String theSuit, String thePoint){
+    public Card(String theRank, String theSuit, int thePoint){
         rank = theRank;
         suit = theSuit;
         point = thePoint;
     }
     // This gets the rank
-    public int getRank(){
+    public String getRank(){
+
         return rank;
     }
     // This gets the suit
@@ -18,25 +19,24 @@ public class Card {
         return suit;
     }
     // This gets the point
-    public String getPoint(){
+    public int getPoint(){
         return point;
     }
     // This sets the point
-    public void setPoint(String thePoint){
-        if (thePoint = point){
+    public void setPoint(int thePoint){
             point = thePoint;
-        }
     }
     // This sets the rank of the card
-    public void setRank(int theRank){
-        if (rank >= 2 && rank <= 10){
-            rank = theRank;
-        }
+    public void setRank(String theRank){
+
     }
     // This sets the suit one of the 4 suits
     public void setSuit(String theSuit){
         if (theSuit.equals("Clubs") || theSuit.equals("Spades") || theSuit.equals("Diamonds") || theSuit.equals("Hearts")){
             suit = theSuit;
         }
+    }
+    public String toString(){
+        return rank + " of " + suit;
     }
 }
