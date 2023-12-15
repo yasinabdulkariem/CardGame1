@@ -11,7 +11,6 @@ public class Card {
     }
     // This gets the rank
     public String getRank(){
-
         return rank;
     }
     // This gets the suit
@@ -24,17 +23,15 @@ public class Card {
     }
     // This sets the point
     public void setPoint(int thePoint){
-            point = thePoint;
+        point = thePoint;
     }
     // This sets the rank of the card
     public void setRank(String theRank){
-
+        rank = theRank;
     }
     // This sets the suit one of the 4 suits
     public void setSuit(String theSuit){
-        if (theSuit.equals("Clubs") || theSuit.equals("Spades") || theSuit.equals("Diamonds") || theSuit.equals("Hearts")){
-            suit = theSuit;
-        }
+        suit = theSuit;
     }
     public String toString(){
         return rank + " of " + suit;
