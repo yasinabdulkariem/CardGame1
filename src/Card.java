@@ -3,7 +3,7 @@ public class Card {
     private String rank;
     private String suit;
     private int point;
-
+    // This makes the card
     public Card(String theRank, String theSuit, int thePoint){
         rank = theRank;
         suit = theSuit;

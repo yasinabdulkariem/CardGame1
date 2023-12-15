@@ -4,6 +4,7 @@ public class Deck {
     private ArrayList<Card> cards;
     private int cardsLeft;
 
+    // This holds the information for the deck
     public Deck(String[] ranks, String[] suits, int[] points){
         cards = new ArrayList<>();
         for (int i = 0; i < ranks.length; i++){
@@ -12,19 +13,20 @@ public class Deck {
             }
         }
         cardsLeft = cards.size();
+        shuffle();
     }
-    // Checks if there are any cards left
+    // This checks if there are any cards left
     public boolean isEmpty(){
         if (cardsLeft == 0){
             return true;
         }
         return false;
     }
-    // gets the cards left
+    // This gets the cards left
     public int getCardsLeft(){
         return cardsLeft;
     }
-    // deals a new set of cards
+    // This deals a new set of cards
     public Card deal(){
       if(isEmpty()){
           return null;
@@ -32,6 +34,7 @@ public class Deck {
       cardsLeft--;
       return cards.get(cardsLeft);
     }
+    // This shuffles the card to randomize them
     public void shuffle(){
         Card person;
         for (int i = cards.size() - 1; i > 0; i--){
